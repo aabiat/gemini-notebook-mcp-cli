@@ -1,18 +1,7 @@
 name: Version Alignment Check
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'pyproject.toml'
-      - 'src/notebooklm_tools/__init__.py'
-      - 'src/notebooklm_tools/data/SKILL.md'
-      - 'src/notebooklm_tools/data/AGENTS_SECTION.md'
-      - 'desktop-extension/manifest.json'
-  pull_request:
-    branches: [main]
-  release:
-    types: [published]
+  workflow_dispatch:
 
 jobs:
   check-versions:
